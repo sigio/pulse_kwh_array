@@ -1,15 +1,15 @@
 #define PULSES_PER_KWH 2000
 #define MS_PER_HOUR 3.6e6
 
-#define NUMREADERS 4
-static short inpin[NUMREADERS] = { 12, 10, 8, 6 };
-static short outpin[NUMREADERS] = { 11, 9, 7, 5 };
+#define NUMREADERS 1
+static short inpin[NUMREADERS] = { 8 };
+static short outpin[NUMREADERS] = { 7 };
 //unsigned long howlong;
 //unsigned int loopcount = 0;
 
 void setup () {
    Serial.begin(115200);
-   Serial.println("init");
+   Serial.println("Pulse_kwh_array init " __DATE__ " " __TIME__ );
    
    for( short i = 0; i < NUMREADERS; i++ )
    {
